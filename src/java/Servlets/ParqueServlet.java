@@ -1,0 +1,50 @@
+
+package Servlets;
+
+import Logica.Controladora;
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(name = "ParqueServlet", urlPatterns = {"/ParqueServlet"})
+public class ParqueServlet extends HttpServlet {
+
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        
+    }
+
+    
+    
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        //DESPUES MODIFICAR ESTA PRUEBA(formulario de index tambien)
+        String nombre = request.getParameter("nombre");
+        String password = request.getParameter("password");
+        
+        request.getSession().setAttribute("nombre", nombre);
+        request.getSession().setAttribute("password", password);
+        
+        response.sendRedirect("confirmacion.jsp");
+        
+        //PASAMOS DATOS A LA LOGICA
+        Controladora control = new Controladora();
+        control.crearUsuario(nombre, password);
+        
+    }
+
+    
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}
