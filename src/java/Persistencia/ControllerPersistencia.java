@@ -11,10 +11,18 @@ public class ControllerPersistencia {
     public void crearEmpleado(Empleado empleado){
         jpaEmpleado.create(empleado);
     }
+    public void crearUsuario(Usuario user) {
+        jpaUsuario.create(user);
+    }
 
     public List<Usuario> getUsuarios() {
         
         return jpaUsuario.findUsuarioEntities();
     }
+    public List<Empleado> getEmpleados(){
+        return jpaEmpleado.findEmpleadoEntities();
+    }
+
+    
     
 }

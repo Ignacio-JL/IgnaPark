@@ -21,6 +21,25 @@ public class Controller {
         
         controller.crearEmpleado(empleado);
     }
+    public void crearUsuario(String nombre, String password, Empleado empleado) {
+        Usuario user = new Usuario();
+        user.setNombre(nombre);
+        user.setPassword(password);
+        user.setRelEmpleado(empleado);
+        
+        controller.crearUsuario(user);
+    }
+    public Empleado searchEmpleado(String dni){
+        List<Empleado> listaEmpleado = new ArrayList<Empleado>();
+        listaEmpleado = controller.getEmpleados();
+        for (Empleado empleado : listaEmpleado) {
+            if(empleado.getDni().equals(dni)){
+                return empleado;
+            }
+            
+        }
+        return null;
+    }
 
     public boolean comprobarLogin(String user, String password) {
         boolean isOk=false;
@@ -36,4 +55,6 @@ public class Controller {
         }
         return isOk;
     }
+
+    
 }

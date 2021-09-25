@@ -26,11 +26,10 @@ public class RegisterServlet extends HttpServlet {
         request.getSession().setAttribute("apellido", request.getParameter("apellido"));
         request.getSession().setAttribute("dni", request.getParameter("dni"));
         request.getSession().setAttribute("edad", request.getParameter("edad"));
-        
-        response.sendRedirect("confirmed.jsp");
-        
+              
         Controller controller = new Controller();
         controller.crearEmpleado(request.getParameter("nombre"), request.getParameter("apellido"), request.getParameter("dni"),Integer.parseInt(request.getParameter("edad")));
+        response.sendRedirect("confirmed.jsp");
     }
 
     

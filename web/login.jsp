@@ -20,6 +20,7 @@
                 <input type="submit" value="Iniciar Sesión">
             </div>
         </form>
-        <a href="register.jsp" >Quiero registrarme</a>
+        <p>¿Aun no te registraste como empleado? Registrate<a href="register.jsp">Aca</a></p>
+        <a href="registerUser.jsp" >Quiero registrar mi usuario</a>
     </body>
 </html>

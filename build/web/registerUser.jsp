@@ -21,6 +21,9 @@
                 <label for="pass">Contraseña</label>
                 <input type="password" name="pass">
             </div>
+            <div>
+                <input type="submit" value="crear usuario">
+            </div>
         </form>
         
         <p>¿Aun no te registraste como empleado? Registrate<a href="register.jsp">Aca</a></p>
