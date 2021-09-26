@@ -11,8 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "RegisterUserServlet", urlPatterns = {"/RegisterUserServlet"})
-public class RegisterUserServlet extends HttpServlet {
+
+@WebServlet(name = "AddGameServlet", urlPatterns = {"/AddGameServlet"})
+public class AddGameServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -22,25 +23,23 @@ public class RegisterUserServlet extends HttpServlet {
 
     
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    
+//        request.getSession().setAttribute("capacidad", request.getParameter("capacidad"));
+  //      request.getSession().setAttribute("altMin", request.getParameter("altMin"));        
         
         Controller controller = new Controller();
         Empleado empleado= controller.searchEmpleadoByDni(request.getParameter("dni"));
         if(empleado==null){ 
-            response.sendRedirect("errorRegisterUser.jsp");
+            response.sendRedirect("errorAddGame.jsp");
         }
         else{
-            controller.crearUsuario(request.getParameter("nombre"), request.getParameter("pass"), empleado);
-            response.sendRedirect("confirmed.jsp");    
+            controller.crearJuego(request.getParameter("nombre"), Integer.parseInt(request.getParameter("capacidad")), Integer.parseInt(request.getParameter("altMin")), empleado);
+            System.out.println("bieeeeen");
+            response.sendRedirect("index.jsp");    
         }
-        
-                
     }
 
-
-    
     @Override
     public String getServletInfo() {
         return "Short description";

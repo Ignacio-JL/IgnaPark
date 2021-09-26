@@ -29,7 +29,28 @@ public class Controller {
         
         controller.crearUsuario(user);
     }
-    public Empleado searchEmpleado(String dni){
+    public void crearJuego(String nombre, int capacidad, int altMin, Empleado empleado) {
+        List<Empleado> employeeList = new ArrayList<Empleado>();
+        employeeList.add(empleado);
+        Juego game = new Juego();
+        game.setNombre(nombre);
+        game.setCapacidad(capacidad);
+        game.setAlturaMin(altMin);
+        game.setRelEmpleado(employeeList);
+        controller.crearJuego(game);
+    }
+    public Juego searchGameByName(String nombre) {
+        
+        List<Juego> gameList = new ArrayList<Juego>();
+        gameList = controller.getJuegos();
+        for (Juego juego : gameList) {
+            if(juego.getNombre().equals(nombre)){
+                return juego;
+            }
+        }
+        return null;
+    }
+    public Empleado searchEmpleadoByDni(String dni){
         List<Empleado> listaEmpleado = new ArrayList<Empleado>();
         listaEmpleado = controller.getEmpleados();
         for (Empleado empleado : listaEmpleado) {
@@ -55,6 +76,12 @@ public class Controller {
         }
         return isOk;
     }
+
+    
+
+   
+
+    
 
     
 }

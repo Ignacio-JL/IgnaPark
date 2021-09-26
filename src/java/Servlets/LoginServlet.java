@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        boolean isOk=false;
+        boolean isOk;
         Controller controller = new Controller();
         
         isOk=controller.comprobarLogin(request.getParameter("usuario"), request.getParameter("pass"));
