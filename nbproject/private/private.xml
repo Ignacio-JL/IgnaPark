@@ -4,12 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/src/java/Persistencia/ControllerPersistencia.java</file>
-            <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/src/java/Servlets/RegisterServlet.java</file>
+            <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/src/java/Servlets/LoginServlet.java</file>
             <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/web/index.jsp</file>
-            <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/web/register.jsp</file>
-            <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/src/java/Logica/Juego.java</file>
-            <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/src/java/Servlets/RegisterUserServlet.java</file>
-            <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/src/java/Servlets/AddGameServlet.java</file>
+            <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/web/listEmployee.jsp</file>
             <file>file:/H:/Documents/Jose/Programacion/Curso_Java/Curso%20Polotic/NetBeans%20Projects/IgnaPark/src/java/Logica/Controller.java</file>
         </group>
     </open-files>

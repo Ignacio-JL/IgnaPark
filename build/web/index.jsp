@@ -11,7 +11,8 @@
             if(request.getSession().getAttribute("usuario")==null)//Aca usamos los valores del session 'conservado' desde el servlet
                 response.sendRedirect("errorLogin.jsp");
 
-        %>    
+        %>
+        
         <h1>BIENVENIDO A IGNAPARK XDDDDD</h1>
         <h3>Añadir Atraccion al parque</h3>
         <form action="AddGameServlet" method="GET">
@@ -50,6 +51,8 @@
             </div>
             <input type="submit" value="Agregar Empleado">
         </form>
+        
+        <a href="listEmployee.jsp"><h4>Ver Lista de empleados</h4></a>
         
         
         

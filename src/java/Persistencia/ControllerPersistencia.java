@@ -3,6 +3,7 @@ package Persistencia;
 import Logica.Empleado;
 import Logica.Juego;
 import Logica.Usuario;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,6 +22,31 @@ public class ControllerPersistencia {
     public void crearJuego(Juego juego){
         jpaJuego.create(juego);
     }
+    public String searchUserToList(int id){
+        List<Usuario> list = new ArrayList<Usuario>();
+        list= getUsuarios();
+        for (Usuario usuario : list) {
+            
+            if( usuario.getRelEmpleado().getIdEmpleado()==id ){
+                return usuario.getNombre();
+            }
+        }
+        return "";
+    }
+   public String searchGameToList(int id){
+       List<Juego> list = new ArrayList<Juego>();
+       list = getJuegos();
+       for (Juego juego : list) {
+           
+           for(Empleado _juego : juego.getRelEmpleado()){
+               if(_juego.getIdEmpleado() == id)
+               {
+                   return juego.getNombre();
+               }
+           }
+       }
+       return "N/A";
+   }
     
     public void addEmployee(Juego juego) {
         try {
