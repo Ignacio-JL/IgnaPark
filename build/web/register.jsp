@@ -11,7 +11,7 @@
         <form action="RegisterServlet" method="POST">
             <div>
                 <label for="nombre">Nombre</label>
-                 <input type="text" name="nombre">
+                <input type="text" name="nombre">
             </div>
             <div>
                 <label for="apellido">Apellido</label>
